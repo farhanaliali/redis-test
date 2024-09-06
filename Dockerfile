@@ -5,7 +5,7 @@ FROM python:3.9-slim
 WORKDIR /app
 
 # Copy the Python script
-COPY your_script.py .
+COPY redis.py .
 
 # Install dependencies
 RUN pip install redis
