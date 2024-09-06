@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: python-redis-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: python-redis-app
+  template:
+    metadata:
+      labels:
+        app: python-redis-app
+    spec:
+      containers:
+      - name: python-redis-app
+        image: your_dockerhub_username/python-redis-app:latest  # Replace with your actual image
+        env:
+        - name: REDIS_HOST
+          value: "redis"  # The Redis service name if Redis is deployed in the cluster
+        - name: REDIS_PORT
+          value: "6379"   # Redis default port
+        - name: REDIS_DB
+          value: "0"      # Redis database index
+
