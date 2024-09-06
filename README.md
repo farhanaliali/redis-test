@@ -43,7 +43,7 @@ Set the Redis connection environment variables:
 
 ### Docker
 
-    docker run -e REDIS_HOST=your_redis_host -e REDIS_PORT=6379 -e REDIS_DB=0 your_dockerhub_username/python-redis-app
+    docker run -e REDIS_HOST=your_redis_host -e REDIS_PORT=6379 -e REDIS_DB=0 farhanaliali/redis-test
 ### Kubernetes 
 
 update the dpeloyment file according to your needs 
