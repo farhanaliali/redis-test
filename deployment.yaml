@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: python-redis-app
-        image: your_dockerhub_username/python-redis-app:latest  # Replace with your actual image
+        image: farhanaliali/redis-test:latest  # Replace with your actual image
         env:
         - name: REDIS_HOST
           value: "redis"  # The Redis service name if Redis is deployed in the cluster
